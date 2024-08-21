@@ -1,0 +1,11 @@
+services:
+  database:
+    image: mongo:7.0.5
+    restart: unless-stopped
+    volumes:
+      - navtrack:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  navtrack:
